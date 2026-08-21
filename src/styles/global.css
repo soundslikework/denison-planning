@@ -6,8 +6,11 @@
   --color-ink: #16302E;
   --color-gold: #E3A73C;
 
-  --font-display: "Space Grotesk", sans-serif;
+  --font-display: "Satoshi", sans-serif;
   --font-body: "Inter", sans-serif;
+
+  /* Wide letter-spacing of the logo lockup; beyond Tailwind's widest (0.1em) */
+  --tracking-logo: 0.2em;
 }
 
 body {
