@@ -7,5 +7,7 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
 
-  adapter: cloudflare(),
+  // Cloudflare can't run sharp at runtime; "compile" optimizes images with
+  // sharp at build time instead, which works because this page is prerendered.
+  adapter: cloudflare({ imageService: 'compile' }),
 });
