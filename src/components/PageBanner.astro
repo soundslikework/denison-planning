@@ -1,0 +1,23 @@
+---
+import Header from "./Header.astro";
+import CurveRule from "./CurveRule.astro";
+import ContentContainer from "./ContentContainer.astro";
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<section class="bg-teal text-gold">
+  <Header />
+  <ContentContainer class="pt-20 pb-16 md:pt-28 md:pb-20">
+    <h1
+      class="font-display font-bold text-4xl md:text-6xl leading-none tracking-tight"
+    >
+      {title}
+    </h1>
+    <CurveRule class="mt-6" />
+  </ContentContainer>
+</section>

@@ -1,10 +1,20 @@
+import type { ServiceIconName } from "./serviceIcons";
+
 export interface Service {
   number: string;
   title: string;
   description: string;
-  icon: "compass" | "document" | "people" | "institution" | "chart";
+  icon: ServiceIconName;
 }
 
+/**
+ * Short service summary for the homepage grid.
+ *
+ * Deliberately SEPARATE from the fuller list in `./servicesPage.ts` used by
+ * /services, which has its own titles and wording. The two are intentionally
+ * allowed to differ — if you revise a service here, check whether the
+ * /services entry should change too.
+ */
 export const services: Service[] = [
   {
     number: "01",

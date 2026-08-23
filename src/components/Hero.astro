@@ -1,7 +1,8 @@
 ---
-import { Image } from 'astro:assets';
-import Header from './Header.astro';
-import heroImage from '../assets/hero-toronto-skyline.jpg';
+import { Image } from "astro:assets";
+import Header from "./Header.astro";
+import CurveRule from "./CurveRule.astro";
+import heroImage from "../assets/hero-toronto-skyline.jpg";
 ---
 
 <section class="relative isolate bg-teal text-gold overflow-hidden">
@@ -15,7 +16,8 @@ import heroImage from '../assets/hero-toronto-skyline.jpg';
        brand hue, matching the mockup's graded look. The scrim above it stays
        near-solid teal through the text zone to protect contrast, then opens
        up toward the bottom so the skyline reads. -->
-  <div class="absolute inset-0 bg-teal mix-blend-color" aria-hidden="true"></div>
+  <div class="absolute inset-0 bg-teal mix-blend-color" aria-hidden="true">
+  </div>
   <div
     class="absolute inset-0 bg-linear-to-b from-teal via-teal/90 to-teal/50"
     aria-hidden="true"
@@ -24,27 +26,20 @@ import heroImage from '../assets/hero-toronto-skyline.jpg';
   <div class="relative">
     <Header />
     <div class="max-w-7xl mx-auto px-6 md:px-8 pt-32 pb-40 md:pt-48 md:pb-52">
-      <h1 class="font-display font-bold text-5xl md:text-7xl lg:text-8xl leading-none tracking-tight max-w-5xl">
-        Planning for<br />places that work.
-      </h1>
-      <div class="mt-10 md:mt-20 font-body text-base md:text-lg leading-relaxed space-y-1">
-        <p>Thoughtful planning.</p>
-        <p>Strong neighbourhoods.</p>
-        <p>Better places.</p>
-      </div>
-      <svg
-        viewBox="0 0 144 16"
-        fill="none"
-        class="mt-6 w-28 md:w-36 text-gold"
-        aria-hidden="true"
+      <h1
+        class="font-display font-bold text-5xl md:text-7xl lg:text-8xl leading-none tracking-tight max-w-5xl"
       >
-        <path
-          d="M1 10 C40 4 90 3 143 6"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-        />
-      </svg>
+        Neighbourhood Planning<br />& Development
+      </h1>
+      <div
+        class="mt-10 md:mt-20 font-body text-base md:text-lg leading-relaxed space-y-1"
+      >
+        <p>
+          Planning and development consulting for property owners,<br
+          />developers, community organizations and housing providers
+        </p>
+      </div>
+      <CurveRule class="mt-6" />
     </div>
   </div>
 </section>

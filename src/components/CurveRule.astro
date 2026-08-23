@@ -1,0 +1,23 @@
+---
+// The gold curve motif from the mockup: low on the left, rising to an apex
+// past centre, then easing down to a right end that sits higher than the left.
+// Used under the hero subcopy and under each interior page title.
+interface Props {
+  class?: string;
+}
+
+const { class: className } = Astro.props;
+---
+
+<svg
+  viewBox="0 0 144 16"
+  fill="none"
+  class:list={["w-28 md:w-36 text-gold", className]}
+  aria-hidden="true"
+>
+  <path
+    d="M1 10 C40 4 90 3 143 6"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"></path>
+</svg>

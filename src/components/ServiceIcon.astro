@@ -1,6 +1,8 @@
 ---
+import type { ServiceIconName } from "../data/serviceIcons";
+
 interface Props {
-  name: "compass" | "document" | "people" | "institution" | "chart";
+  name: ServiceIconName;
 }
 
 const { name } = Astro.props;
@@ -72,6 +74,20 @@ const { name } = Astro.props;
       class="size-8"
     >
       <path d="M4 20V10M11 20V4M18 20v-7M3 20h18" />
+    </svg>
+  )
+}
+{
+  name === "search" && (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1.5"
+      class="size-8"
+    >
+      <circle cx="11" cy="11" r="6" />
+      <path d="M15.5 15.5L21 21" stroke-linecap="round" />
     </svg>
   )
 }

@@ -1,0 +1,39 @@
+---
+import PageLayout from "../layouts/PageLayout.astro";
+import SectionLabel from "../components/SectionLabel.astro";
+import ContentContainer from "../components/ContentContainer.astro";
+
+const email = "hello@denisonplanning.com";
+---
+
+<PageLayout
+  title="Contact"
+  description="Have a planning question or a project you'd like to discuss? Get in touch with Denison Planning at hello@denisonplanning.com. Toronto, Ontario."
+  showCta={false}
+>
+  <section class="bg-paper text-ink">
+    <ContentContainer class="py-20 md:py-28">
+      <p
+        class="font-display text-xl md:text-2xl leading-snug text-teal"
+      >
+        Have a planning question or a project you'd like to discuss?
+      </p>
+
+      <SectionLabel class="mt-16 md:mt-20">Get in touch</SectionLabel>
+
+      <div class="mt-8">
+        <a
+          href={`mailto:${email}`}
+          class="font-display text-lg md:text-3xl font-bold text-teal hover:opacity-75 transition-opacity break-words"
+        >
+          {email}
+        </a>
+        <p
+          class="mt-6 font-display text-sm uppercase tracking-widest text-ink/70"
+        >
+          Toronto, Ontario
+        </p>
+      </div>
+    </ContentContainer>
+  </section>
+</PageLayout>

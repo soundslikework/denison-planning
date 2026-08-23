@@ -1,24 +1,57 @@
 ---
-const navLinks = ["Services", "Approach", "About", "Contact"];
+const navLinks = [
+  { label: "Services", href: "/services" },
+  { label: "Approach", href: "/approach" },
+  { label: "About", href: "/about" },
+  { label: "Contact", href: "/contact" },
+];
+
+// Normalise so "/services" and "/services/" both match.
+const currentPath = Astro.url.pathname.replace(/\/+$/, "") || "/";
 ---
 
 <header class="relative z-10" role="banner">
-  <div class="max-w-7xl mx-auto px-6 md:px-8 pt-8 md:pt-10 flex flex-col md:flex-row md:items-start md:justify-between gap-4">
-    <div class="font-display text-gold">
-      <p class="text-xl md:text-2xl font-bold uppercase tracking-logo leading-tight">
+  <div
+    class="max-w-7xl mx-auto px-6 md:px-8 pt-8 md:pt-10 flex flex-col md:flex-row md:items-start md:justify-between gap-4"
+  >
+    <a
+      href="/"
+      class="font-display text-gold hover:opacity-75 transition-opacity"
+    >
+      <span
+        class="block text-xl md:text-2xl font-bold uppercase tracking-logo leading-tight"
+      >
         Denison<br />Planning
-      </p>
-      <p class="mt-2 text-xs uppercase tracking-widest leading-relaxed max-w-36">
+      </span>
+      <span
+        class="block mt-2 text-xs uppercase tracking-widest leading-relaxed max-w-36"
+      >
         Neighbourhood Planning &amp; Development
-      </p>
-    </div>
+      </span>
+    </a>
     <nav aria-label="Primary">
-      <ul class="flex flex-wrap gap-4 md:gap-8 font-display text-xs md:text-sm uppercase tracking-widest text-gold">
-        {navLinks.map((link) => (
-          <li>
-            <a href="#" class="hover:opacity-75 transition-opacity">{link}</a>
-          </li>
-        ))}
+      <ul
+        class="flex flex-wrap gap-4 md:gap-8 font-display text-xs md:text-sm uppercase tracking-widest text-gold"
+      >
+        {
+          navLinks.map(({ label, href }) => {
+            const isCurrent = currentPath === href;
+            return (
+              <li>
+                <a
+                  href={href}
+                  aria-current={isCurrent ? "page" : undefined}
+                  class:list={[
+                    "hover:opacity-75 transition-opacity",
+                    isCurrent && "underline underline-offset-4",
+                  ]}
+                >
+                  {label}
+                </a>
+              </li>
+            );
+          })
+        }
       </ul>
     </nav>
   </div>

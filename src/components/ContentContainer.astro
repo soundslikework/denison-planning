@@ -1,0 +1,16 @@
+---
+// The centred content column for interior pages. Used by the page banner's
+// title AND by each page's body so they share one left edge — change the
+// width here and every interior page follows.
+//
+// The homepage keeps its wider max-w-7xl sections; this is interior-page only.
+interface Props {
+  class?: string;
+}
+
+const { class: className } = Astro.props;
+---
+
+<div class:list={["max-w-4xl mx-auto px-6 md:px-8", className]}>
+  <slot />
+</div>

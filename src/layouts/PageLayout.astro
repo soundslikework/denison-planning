@@ -1,0 +1,25 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import PageBanner from "../components/PageBanner.astro";
+import CtaBand from "../components/CtaBand.astro";
+import Footer from "../components/Footer.astro";
+
+interface Props {
+  /** Page name — shown in the banner and used to build the <title>. */
+  title: string;
+  description: string;
+  /** Set false where the CTA would link to the page you're already on. */
+  showCta?: boolean;
+}
+
+const { title, description, showCta = true } = Astro.props;
+---
+
+<BaseLayout title={`${title} — Denison Planning`} description={description}>
+  <PageBanner title={title} />
+  <main>
+    <slot />
+  </main>
+  {showCta && <CtaBand />}
+  <Footer />
+</BaseLayout>

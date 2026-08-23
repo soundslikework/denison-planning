@@ -1,0 +1,49 @@
+---
+import PageLayout from "../layouts/PageLayout.astro";
+import SectionLabel from "../components/SectionLabel.astro";
+import ContentContainer from "../components/ContentContainer.astro";
+
+const clients = [
+  "Property owners and homeowners",
+  "Small-scale developers",
+  "Community organizations and non-profits",
+  "Housing providers",
+  "Architects and design professionals",
+  "Municipal and public-sector clients",
+];
+---
+
+<PageLayout
+  title="Approach"
+  description="Right-sized planning support for projects that don't need a large consulting team. Denison Planning works collaboratively with property owners, developers, community organizations, housing providers, architects and public-sector clients."
+>
+  <section class="bg-paper text-ink">
+    <ContentContainer class="py-20 md:py-28">
+      <p
+        class="font-display text-xl md:text-2xl leading-snug text-teal"
+      >
+        Denison Planning provides right-sized planning support for projects that
+        don't necessarily need a large consulting team.
+      </p>
+      <p class="mt-6 text-base leading-relaxed text-ink/80 max-w-prose">
+        Projects are approached collaboratively, with consideration of the
+        planning context, practical options and the municipal process. Denison
+        Planning works with clients, municipalities, architects, designers and
+        other consultants to move projects forward.
+      </p>
+
+      <SectionLabel class="mt-16 md:mt-24">
+        Who Denison Planning Works With
+      </SectionLabel>
+      <ul class="mt-8">
+        {
+          clients.map((client) => (
+            <li class="py-5 border-b border-ink/10 font-display text-base md:text-lg">
+              {client}
+            </li>
+          ))
+        }
+      </ul>
+    </ContentContainer>
+  </section>
+</PageLayout>
