@@ -6,32 +6,72 @@ interface Props {
 const { name } = Astro.props;
 ---
 
-{name === "compass" && (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="size-6">
-    <circle cx="12" cy="12" r="9" />
-    <path d="M15 9l-3.5 1.5L10 14l3.5-1.5L15 9z" />
-  </svg>
-)}
-{name === "document" && (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="size-6">
-    <path d="M6 3h9l3 3v15H6z" />
-    <path d="M9 9h3M9 12h6M9 15h6" />
-  </svg>
-)}
-{name === "people" && (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="size-6">
-    <circle cx="8" cy="8" r="2.5" />
-    <circle cx="16" cy="8" r="2.5" />
-    <path d="M3 19c0-2.8 2.2-5 5-5s5 2.2 5 5M11 19c0-2.8 2.2-5 5-5s5 2.2 5 5" />
-  </svg>
-)}
-{name === "institution" && (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="size-6">
-    <path d="M4 10l8-5 8 5M5 10v9M19 10v9M9 10v9M15 10v9M3 21h18" />
-  </svg>
-)}
-{name === "chart" && (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="size-6">
-    <path d="M4 20V10M11 20V4M18 20v-7M3 20h18" />
-  </svg>
-)}
+{
+  name === "compass" && (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1.5"
+      class="size-8"
+    >
+      <circle cx="12" cy="12" r="9" />
+      <path d="M15 9l-3.5 1.5L10 14l3.5-1.5L15 9z" />
+    </svg>
+  )
+}
+{
+  name === "document" && (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1.5"
+      class="size-8"
+    >
+      <path d="M6 3h9l3 3v15H6z" />
+      <path d="M9 9h3M9 12h6M9 15h6" />
+    </svg>
+  )
+}
+{
+  name === "people" && (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1.5"
+      class="size-8"
+    >
+      <circle cx="8" cy="8" r="2.5" />
+      <circle cx="16" cy="8" r="2.5" />
+      <path d="M3 19c0-2.8 2.2-5 5-5s5 2.2 5 5M11 19c0-2.8 2.2-5 5-5s5 2.2 5 5" />
+    </svg>
+  )
+}
+{
+  name === "institution" && (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1.5"
+      class="size-8"
+    >
+      <path d="M4 10l8-5 8 5M5 10v9M19 10v9M9 10v9M15 10v9M3 21h18" />
+    </svg>
+  )
+}
+{
+  name === "chart" && (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1.5"
+      class="size-8"
+    >
+      <path d="M4 20V10M11 20V4M18 20v-7M3 20h18" />
+    </svg>
+  )
+}
