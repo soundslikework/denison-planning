@@ -39,7 +39,7 @@ export const servicesPage: DetailedService[] = [
   },
   {
     number: "04",
-    title: "Planning Reports & Justification",
+    title: "Planning Justification Reports",
     description:
       "Clear, evidence-based planning analysis to support development proposals and planning decisions.",
     icon: "chart",
@@ -55,7 +55,7 @@ export const servicesPage: DetailedService[] = [
     number: "06",
     title: "Community & Stakeholder Engagement",
     description:
-      "Planning and engagement support for projects involving communities and stakeholders.",
+      "Meaningful engagement that builds understanding and supports better decisions.",
     icon: "people",
   },
   {

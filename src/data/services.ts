@@ -42,7 +42,7 @@ export const services: Service[] = [
   },
   {
     number: "05",
-    title: "Planning Reports & Justification",
+    title: "Planning Justification Reports",
     description: "Clear, evidence-based reports to support proposals and planning decisions.",
     icon: "chart",
   },
