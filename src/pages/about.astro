@@ -1,6 +1,8 @@
 ---
 import PageLayout from "../layouts/PageLayout.astro";
 import ContentContainer from "../components/ContentContainer.astro";
+import { Image } from "astro:assets";
+import portrait from "../assets/claire-portrait.jpg";
 ---
 
 <PageLayout
@@ -12,15 +14,13 @@ import ContentContainer from "../components/ContentContainer.astro";
     <ContentContainer class="py-20 md:py-28">
       <div class="grid md:grid-cols-5 gap-10 md:gap-16">
         <div class="md:col-span-2">
-          <!-- Placeholder for Claire's portrait. Replace this div with an
-               <Image src={portrait} alt="Claire Domino" /> importing
-               from ../assets/ once the headshot is provided; keep the aspect-3/4
-               framing so the two-column layout doesn't shift. -->
-          <div
-            class="aspect-3/4 bg-teal/10 border border-teal/20"
-            aria-hidden="true"
-          >
-          </div>
+          <Image
+            src={portrait}
+            alt="Claire Domino looking out over the Toronto skyline from the lakeshore"
+            widths={[400, 640, 800]}
+            sizes="(min-width: 768px) 40vw, 100vw"
+            class="aspect-3/4 w-full object-cover object-[36%_50%]"
+          />
         </div>
         <div class="md:col-span-3">
           <h2
