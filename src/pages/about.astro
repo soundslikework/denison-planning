@@ -1,52 +1,52 @@
 ---
 import PageLayout from "../layouts/PageLayout.astro";
-import ContentContainer from "../components/ContentContainer.astro";
+import { Image } from "astro:assets";
+import portrait from "../assets/claire-portrait.jpg";
 ---
 
 <PageLayout
   title="About"
-  description="Claire Stevenson-Blythe, MScPl, RPP — Principal Planner at Denison Planning. A Registered Professional Planner with experience in municipal planning, development approvals, planning policy, research and public engagement."
+  description="Claire Domino, MScPl, RPP — Principal Planner at Denison Planning. A Registered Professional Planner with experience in municipal planning, development approvals, planning policy, research and public engagement."
   showCta={false}
 >
   <section class="bg-paper text-ink">
-    <ContentContainer class="py-20 md:py-28">
-      <div class="grid md:grid-cols-5 gap-10 md:gap-16">
-        <div class="md:col-span-2">
-          <!-- Placeholder for Claire's portrait. Replace this div with an
-               <Image src={portrait} alt="Claire Stevenson-Blythe" /> importing
-               from ../assets/ once the headshot is provided; keep the aspect-3/4
-               framing so the two-column layout doesn't shift. -->
-          <div
-            class="aspect-3/4 bg-teal/10 border border-teal/20"
-            aria-hidden="true"
+    <!-- Text keeps the shared content-column left edge (max-w-4xl + px-8);
+         the photo bleeds to the right edge of the screen. -->
+    <div class="grid md:grid-cols-2 md:min-h-[36rem]">
+      <div
+        class="px-6 py-16 md:py-28 md:pl-[max(2rem,calc((100vw-56rem)/2+2rem))] md:pr-12 md:self-center"
+      >
+        <h2
+          class="font-display text-2xl md:text-3xl font-bold leading-tight tracking-tight"
+        >
+          Claire Domino<span class="font-normal text-ink/60"
+            >, MScPl, RPP</span
           >
-          </div>
-        </div>
-        <div class="md:col-span-3">
-          <h2
-            class="font-display text-2xl md:text-3xl font-bold leading-tight tracking-tight"
-          >
-            Claire Stevenson-Blythe<span class="font-normal text-ink/60"
-              >, MScPl, RPP</span
-            >
-          </h2>
-          <p
-            class="mt-3 font-display text-xs uppercase tracking-widest text-teal"
-          >
-            Planning Consultant
-          </p>
-          <p class="mt-8 text-base leading-relaxed text-ink/80">
-            Claire is a Registered Professional Planner with experience in
-            municipal planning, development approvals, planning policy,
-            research, public engagement and planning consulting.
-          </p>
-          <p class="mt-4 text-base leading-relaxed text-ink/80">
-            She holds a Master of Science in Planning from the University of
-            Toronto and a Bachelor of Arts in Environment and Urban
-            Sustainability from Toronto Metropolitan University.
-          </p>
-        </div>
+        </h2>
+        <p
+          class="mt-3 font-display text-xs uppercase tracking-widest text-teal"
+        >
+          Planning Consultant
+        </p>
+        <p class="mt-8 text-base leading-relaxed text-ink/80">
+          Claire is a Registered Professional Planner with experience in
+          municipal planning, development approvals, planning policy,
+          research, public engagement and planning consulting.
+        </p>
+        <p class="mt-4 text-base leading-relaxed text-ink/80">
+          She holds a Master of Science in Planning from the University of
+          Toronto and a Bachelor of Arts in Environment and Urban
+          Sustainability from Toronto Metropolitan University.
+        </p>
       </div>
-    </ContentContainer>
+      <Image
+        src={portrait}
+        alt="Claire Domino looking out over the Toronto skyline from the lakeshore"
+        widths={[480, 800, 960]}
+        sizes="(min-width: 768px) 50vw, 100vw"
+        loading="eager"
+        class="w-full h-full aspect-4/3 md:aspect-auto object-cover object-[36%_50%]"
+      />
+    </div>
   </section>
 </PageLayout>
